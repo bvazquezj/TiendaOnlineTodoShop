@@ -31,7 +31,7 @@ export default function Categorias({categories}) {
         </div>
         <div className="mb-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index) => (
-                <div key={index} className="flex flex-col border p-4 rounded-lg shadow-md items-center">
+                <div key={index} className="cursor-pointer flex flex-col border p-4 rounded-lg shadow-md items-center transition-all duration-200 hover:scale-110">
                     <img src={category.icon} alt={category.name} className="w-full h-20 object-contain mt-2" />
                     <span>{category.name}</span>
                 </div>

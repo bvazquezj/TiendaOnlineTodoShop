@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import Botones from '../../GeneralElements/Botones';
 
 OfertasRapidas.propTypes = {
     products: PropTypes.any,
 }
 
-export default function OfertasRapidas({products}) {
+export default function OfertasRapidas({ products }) {
     return (
         <div className="p-6 border-b-[1px] border-zinc-400" >
             <div className="text-center mb-8 flex flex-col">
@@ -14,7 +15,7 @@ export default function OfertasRapidas({products}) {
                     <p className="inline-block text-xs text-red-600 font-bold">Ofertas</p>
                 </div>
                 <div className="mb-8 flex items-center">
-                    <h2 className="inline-block text-2xl font-bold mr-20">Ofertas rapidas de hoy</h2>
+                    <h2 className="inline-block text-2xl font-bold mr-20">Ofertas rápidas de hoy</h2>
                     <div className="flex justify-center space-x-4 text-xl mt-2">
                         <div className="flex flex-col items-center">
                             <span className="text-sm">Dias</span>
@@ -37,7 +38,7 @@ export default function OfertasRapidas({products}) {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {products.map((product) => (
-                    <div key={product.id} className="border p-4 rounded-lg shadow-md">
+                    <div key={product.id} className="relative border p-4 rounded-lg shadow-md ">
                         <div className="flex justify-between">
                             <span className="bg-red-500 text-white text-xs px-2 py-1 rounded">{product.discount}</span>
                             <button className="text-gray-500">
@@ -62,12 +63,19 @@ export default function OfertasRapidas({products}) {
                             </div>
                             <span className="text-gray-500 ml-2">({product.ratingCount})</span>
                         </div>
+                        <div className="absolute text-center bottom-0 left-0 right-0 top-[15%] h-[43%] w-full overflow-hidden bg-transparent bg-fixed transition duration-300 ease-in-out hover:bg-[#000000d0]">
+                            <div className='flex justify-center items-center w-full h-full text-xl text-transparent font-bold hover:text-white'>
+                                <p>
+                                    Agregar al carrito
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
-            <div className="text-center my-8 ">
-                <button className="bg-red-500 text-white px-6 py-2 rounded-lg">Ver los productos</button>
+            <div className='py-8'>
+            <Botones>Ver los productos</Botones>
             </div>
-        </div>
+        </div >
     );
 }

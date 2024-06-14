@@ -24,7 +24,7 @@ export default function RecomendedBanner() {
                             <span className="text-xs">Seconds</span>
                         </div>
                     </div>
-                    <button className="mt-8 text-xl bg-green-500 text-black px-6 py-2 rounded-full font-bold">Buy Now!</button>
+                    <button className="mt-8 text-xl bg-green-500 text-black transition duration-300 outline-1 hover:outline hover:outline-white hover:bg-black hover:text-green-500 hover:scale-105 px-6 py-2 rounded-full font-bold">Buy Now!</button>
                 </div>
                 <div className="hidden md:block">
                     <img src="src\assets\img\JBL_BOOMBOX_2_HERO_020_x1.png" alt="Speaker" className="w-full h-auto max-w-xl filter brightness-90 contrast-125" />

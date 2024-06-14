@@ -46,7 +46,7 @@ export default function MainContReg() {
                                 className="w-full flex items-center justify-center border border-gray-300 p-2 rounded mt-4"
                             >
                                 <img
-                                    src="path_to_google_icon"
+                                    src="src\assets\img\google.png"
                                     alt="Google"
                                     className="w-5 h-5 mr-2"
                                 />
